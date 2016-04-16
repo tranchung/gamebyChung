@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Game</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<script src="bootstrap.min.js"></script>
+<script language="javascript" src="jquery-2.2.2.min.js"></script>
+
+<style type="text/css">
+	h3{ text-align: center; }
+</style>
+</head>
+<body>
+<div id="d1" class="">	<h3><span class="label label-primary"> Bước 1:Hãy nghĩ trong đầu bạn một số thứ 1 có 2 chữ số.Ví dụ 87</span></h3></div>
+<div id="d2" class="">	<h3><span class="label label-success">Bước 2:Cộng tổng các sổ của số thứ 1. Ví dụ 87 sẽ là 8+7=15</span></h3></div>
+<div id="d3" class="">	<h3><span class="label label-info">Bước 3:Tiếp đó hãy lấy số ở Bước 1 trừ số ở Bước 2 .Ví dụ 87-15=72(nhớ số may mắn này của bạn nhé!)</span><h3></div>
+<div id="d4" class="">	<h3><span class="label label-danger">Hãy nhớ số bước 3 bạn tính và nhìn hình ảnh tương ứng với số đó ,Chung đẹp trai sẽ đoán trúng bạn có tin ko :)) ???</span> <h3></div>
+<button type="button" class="btn btn-info btn-lg"  onclick="play()">
+  <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>Bắt đầu chơi nào !!!
+</button>
+<div id="game" style="display:none;">
+<table class="table">
+<tr class="active">
+<script type="text/javascript">
+
+for (var i=0;i<=9;i++){
+		if(i==0 || i==9){document.write("<td>"+i+"<span class='h'></span></td>");}
+		else if(i==1 || i==3){document.write("<td>"+i+"<span class='a'>");}
+		else if(i==2 || i==4){document.write("<td>"+i+"<span class='b'></span></td>");}
+		else if(i==5 || i==7){document.write("<td>"+i+"<span class='c'></span></td>");}
+		else 				 {document.write("<td>"+i+"<span class='d'></span></td>"); }
+}
+
+
+</script>
+</tr>
+<tr>
+<script type="text/javascript">
+
+for (var i=10;i<=19;i++){
+		if(i==18){
+	document.write("<td>"+i+"<span class='h'></span></td>");}
+		else if(i==11 || i==13){document.write("<td>"+i+"<span class='a'></span></td>");}
+		else if(i==12 || i==14){document.write("<td>"+i+"<span class='d'></span></td>");}
+		else if(i==15 || i==17){document.write("<td>"+i+"<span class='c'></span></td>");}
+		else 				 	{document.write("<td>"+i+"<span class='b'></span></td>"); }
+}
+
+</script>
+</tr>
+<tr class="success">
+<script type="text/javascript">
+
+for (var i=20;i<=29;i++){
+		if(i==27){
+	document.write("<td>"+i+"<span class='h'></span></td>");}
+		else if(i==21 || i==23){document.write("<td>"+i+"<span class='d'></span></td>");}
+		else if(i==22 || i==24){document.write("<td>"+i+"<span class='a'></span></td>");}
+		else if(i==25 || i==27){document.write("<td>"+i+"<span class='b'></span></td>");}
+		else 				 {document.write("<td>"+i+"<span class='c'></span></td>"); }}
+
+</script>
+</tr>
+<tr>
+<script type="text/javascript">
+
+for (var i=30;i<=39;i++){
+		if(i==36){
+	document.write("<td>"+i+"<span class='h'></span></td>");}
+	else if(i==31 || i==33){document.write("<td>"+i+"<span class='b'></span></td>");}
+		else if(i==32 || i==34){document.write("<td>"+i+"<span class='d'></span></td>");}
+		else if(i==35 || i==37){document.write("<td>"+i+"<span class='c'></span></td>");}
+		else 				 {document.write("<td>"+i+"<span class='a'></span></td>"); }
+}
+
+</script>
+</tr >
+<tr class="warning">
+<script type="text/javascript">
+
+for (var i=40;i<=49;i++){
+		if(i==45){
+	document.write("<td>"+i+"<span class='h'></span></td>");}
+		else if(i==41 || i==43){document.write("<td>"+i+"<span class='a'></span></td>");}
+		else if(i==42 || i==44){document.write("<td>"+i+"<span class='c'></span></td>");}
+		else if(i==49 || i==47){document.write("<td>"+i+"<span class='d'></span></td>");}
+		else 				 {document.write("<td>"+i+"<span class='b'></span></td>"); }
+}
+
+</script>
+</tr>
+
+<tr>
+<script type="text/javascript">
+
+for (var i=50;i<=59;i++){
+		if(i==54){
+	document.write("<td>"+i+"<span class='h'></span></td>");}
+		else if(i==51 || i==53){document.write("<td>"+i+"<span class='d'></span></td>");}
+		else if(i==52 || i==59){document.write("<td>"+i+"<span class='c'></span></td>");}
+		else if(i==55 || i==57){document.write("<td>"+i+"<span class='b'></span></td>");}
+		else 				 {document.write("<td>"+i+"<span class='d'></span></td>"); }
+
+</script>
+</tr>
+<tr class="info">
+<script type="text/javascript">
+
+for (var i=60;i<=69;i++){
+		if(i==63){
+	document.write("<td>"+i+"<span class='h'></span></td>");}
+		else if(i==61 || i==65){document.write("<td>"+i+"<span class='a'></span></td>");}
+		else if(i==62 || i==64){document.write("<td>"+i+"<span class='b'></span></td>");}
+		else if(i==66 || i==69){document.write("<td>"+i+"<span class='c'></span></td>");}
+		else 				 {document.write("<td>"+i+"<span class='d'></span></td>"); }
+}
+
+</script>
+</tr>
+<tr>
+<script type="text/javascript">
+
+for (var i=70;i<=79;i++){
+		if(i==72){
+	document.write("<td>"+i+"<span class='h'></span></td>");}
+		else if(i==71 || i==73){document.write("<td>"+i+"<span class='c'></span></td>");}
+		else if(i==78 || i==4){document.write("<td>"+i+"<span class='d'></span></td>");}
+		else if(i==79 || i==76){document.write("<td>"+i+"<span class='b'></span></td>");}
+		else 				 {document.write("<td>"+i+"<span class='a'></span></td>"); }
+}
+
+</script>
+</tr>
+<tr <tr class="danger">
+<script type="text/javascript">
+
+for (var i=80;i<=89;i++){
+		if(i==81){
+	document.write("<td>"+i+"<span class='h'></span></td>");}
+		else if(i==82 || i==83){document.write("<td>"+i+"<span class='d'></span></td>");}
+		else if(i==85 || i==87){document.write("<td>"+i+"<span class='b'></span></td>");}
+		else if(i==88 || i==89){document.write("<td>"+i+"<span class='c'></span></td>");}
+		else 				 {document.write("<td>"+i+"<span class='d'></span></td>"); }
+}
+
+</script>
+</tr>
+<tr class="warning">
+<script type="text/javascript">
+
+for (var i=90;i<=99;i++){
+		
+		if(i==91 || i==93){document.write("<td>"+i+"<span class='b'></span></td>");}
+		else if(i==92 || i==97){document.write("<td>"+i+"<span class='d'></span></td>");}
+		else if(i==95 || i==99){document.write("<td>"+i+"<span class='c'></span></td>");}
+		else 					{document.write("<td>"+i+"<span class='a'></span></td>");}}
+
+
+</script>
+</tr>
+</table>
+<div class="row">
+<div class="col-md-4"></div>
+
+<input class="btn btn-danger" type="button" onclick="hienthi()" value="Ấn vào đây,tôi sẽ nói cho bạn biết hình tương ứng với con số của bạn"> </input>
+<button type="button" class="btn btn-warning btn-lg">
+  <span class="ll" aria-hidden="true"></span>
+</button>
+<button type="button" class="btn btn-info btn-lg" onclick="reload()">
+  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>Chơi lại
+</button>
+</div>
+
+</div>
+
+
+
+<script type="text/javascript">
+var mang = ['glyphicon glyphicon-fire', 'glyphicon glyphicon-knight','glyphicon glyphicon-certificate', 'glyphicon glyphicon-thumbs-up', 'glyphicon glyphicon-tint','glyphicon glyphicon-circle-arrow-right', 'glyphicon glyphicon-circle-arrow-left','glyphicon glyphicon-globe', 'glyphicon glyphicon-pushpin','glyphicon glyphicon-usd','glyphicon glyphicon-link','glyphicon glyphicon-heart-empty','glyphicon glyphicon-record','glyphicon glyphicon-cutlery','glyphicon glyphicon-stats','glyphicon glyphicon-piggy-bank','glyphicon glyphicon-education','glyphicon glyphicon-option-vertical','glyphicon glyphicon-oil',];
+var x  = mang [Math.floor((Math.random() * 10) + 1)];
+var y = mang [Math.floor((Math.random() * 10) + 1)];
+var z = mang [Math.floor((Math.random() * 10) + 1)];
+var w = mang [Math.floor((Math.random() * 10) + 1)];
+var k = mang [Math.floor((Math.random() * 10) + 1)];
+	$('.h').addClass(x);
+	$('.a').addClass(y);
+	$('.b').addClass(z);
+	$('.c').addClass(w);
+	$('.d').addClass(k);
+function hienthi(){
+$('.ll').addClass(x);
+}
+function reload() {
+    location.reload();
+}
+function play(){
+	 $(":hidden").show(2500);
+
+}	
+</script>
+</body>
+</html>
